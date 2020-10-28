@@ -44,26 +44,26 @@
 .btnLeft {
     position: fixed;
     background-color: yellow;
-    font-size: large;
+    font-size: 30px;
     top: 620px;
     left: 120px;
-    border-radius: 50%;
+  
 
 }
 
 .btnRight {
     position: fixed;
-    font-size: large;
+    font-size: 30px;
     background-color: yellow;
     left: 240px;
      top: 620px;
-    border-radius: 50%;
+
 
 }
 
 .btnUp {
     position: fixed;
-    font-size: large;
+    font-size: 30px;
     background-color: yellow;
     size: 200px;
     top: 620px;
