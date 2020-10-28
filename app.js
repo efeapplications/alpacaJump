@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.createElement('img');
     const img2 = document.createElement('img');
 
+
+    const buttonLeft = document.createElement('button');
+    const buttonRight = document.createElement('button');
+    const buttonUp = document.createElement('button');
+
     let doodlerLeftSpace = 50;
     let startPoint = 150;
     let doodlerBottomSpace = startPoint;
@@ -21,6 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
     let rightTimerId;
     let score = 0;
 
+ 
+createButtonControl();
+
+function createButtonControl() {
+
+    grid.appendChild(buttonLeft);
+    buttonLeft.type = 'button';
+    buttonLeft.innerHTML = '<';
+    buttonLeft.className = 'btnLeft';
+    buttonLeft.onclick = function() {
+        moveLeft();
+    };
+
+    grid.appendChild(buttonRight);
+    buttonRight.type = 'button';
+    buttonRight.innerHTML = '>';
+    buttonRight.className = 'btnRight';
+    buttonRight.onclick = function() {
+        moveRight();
+    };
+
+    grid.appendChild(buttonUp);
+    buttonUp.type = 'button';
+    buttonUp.innerHTML = 'o';
+    buttonUp.className = 'btnUp';
+    buttonUp.onclick = function() {
+        moveStraight();
+    }; 
+}  
+        
 
 function createButton() {
     grid.appendChild(button);
@@ -30,11 +65,15 @@ function createButton() {
     button.onclick = function() {
         start()
     };
-}  
-        
+    
+} 
+
+
+
+
+
+
 function createImg() {
-
-
     grid.appendChild(img);
     img.src="background2.png"
     img.width = "50";
@@ -152,18 +191,20 @@ function fall() {
 }
 
 function gameOver() {
-  
+    createButtonControl();
     console.log('game over');
     isGameOver = true;
     while (grid.firstChild) {
         grid.removeChild(grid.firstChild);
     }
     grid.innerHTML = score;
+    
     clearInterval(upTimerId);
     clearInterval(downTimerId);
     clearInterval(leftTimerId);
     clearInterval(rightTimerId);
     clearInterval(movePlatTimerId);
+    createButtonControl();
     createButton();
     createImg();
 
@@ -171,7 +212,7 @@ function gameOver() {
 }
 
 function control(e) {
-    if (e.key === "ArrowLeft") {
+    if (e.key === "ArrowLeft")  {
         moveLeft();
     } else if (e.key === "ArrowRight") {
         moveRight();
@@ -250,9 +291,10 @@ function start() {
         doodlerLeftSpace = 0;
 
     }
+        createButtonControl();
         createPlatforms();
         createDoodler();
-       movePlatforms();
+        movePlatforms();
         jump();
        
         document.addEventListener('keyup', control)
@@ -262,5 +304,6 @@ function start() {
 
 createButton();
 createImg();
+createButtonControl();
 
 })
