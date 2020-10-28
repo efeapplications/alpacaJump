@@ -20,7 +20,7 @@
 .platform {
     width: 60px;
     height: 15px;
-    background-image: url('background.png');
+    background-image: url('stone.jpg');
     position: absolute;}
 
 
@@ -44,7 +44,7 @@
 .btnLeft {
     position: fixed;
     background-color: yellow;
-    size: 200px;
+    font-size: large;
     top: 620px;
     left: 120px;
     border-radius: 50%;
@@ -53,9 +53,9 @@
 
 .btnRight {
     position: fixed;
+    font-size: large;
     background-color: yellow;
-    
-    top: 620px;
+    left: 240px;
      top: 620px;
     border-radius: 50%;
 
@@ -63,6 +63,7 @@
 
 .btnUp {
     position: fixed;
+    font-size: large;
     background-color: yellow;
     size: 200px;
     top: 620px;
