@@ -1,0 +1,64 @@
+.grid {
+    width: 400px;
+    height: 600px;
+    background-image: url('background2.png');
+    justify-content: center;
+    position: relative;
+    font-size: 100px;
+    text-align: center;
+    opacity: 1;
+}
+
+.doodler {
+        width: 87px;
+        height: 100px;
+        background-image: url('alpaca1.png');
+        position: absolute;
+  
+}
+
+.platform {
+    width: 60px;
+    height: 15px;
+    background-image: url('background.png');
+    position: absolute;}
+
+
+.btn-styled {
+    font-size: 15px;
+    color: black;
+    font-family: Helvetica;
+    font-weight: bold;
+    margin: 55px;
+    padding: 0 10px;
+    line-height: 2;
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.img1 {
+position: fixed;
+left: 200px;
+border-radius: 8px;
+border: 1px solid #ddd;
+top: 400px;
+justify-content: center;
+
+margin: 10px; }
+
+.img2 {
+    position: fixed;
+    left: 135px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    top: 400px;
+    justify-content: center;
+    
+    margin: 10px;
+
+}
+
