@@ -40,6 +40,36 @@
     background-color: yellow;
 }
 
+
+.btnLeft {
+    position: fixed;
+    background-color: yellow;
+    size: 200px;
+    bottom: 80px;
+    left: 120px;
+    border-radius: 50%;
+
+}
+
+.btnRight {
+    position: fixed;
+    background-color: yellow;
+    font-size: ;
+    bottom: 80px;
+    left: 240px;
+    border-radius: 50%;
+
+}
+
+.btnUp {
+    position: fixed;
+    background-color: yellow;
+    size: 200px;
+    bottom: 80px;
+    left: 180px;
+
+}
+
 .img1 {
 position: fixed;
 left: 200px;
